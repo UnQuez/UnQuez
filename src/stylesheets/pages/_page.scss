@@ -4,15 +4,16 @@
 
   .page-header-overlay {
     background-color: rgba(0,0,0,.7);
-    padding-top: 10rem;
-    padding-bottom: 6rem;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
     color: #FFF;
   }
 
   .page-header {
     text-align: center;
-    background-position: center;
+    background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
