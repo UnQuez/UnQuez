@@ -1,0 +1,46 @@
+.homepage,
+.homepage-content {
+  height: 100vh;
+}
+
+.homepage {
+  overflow: hidden;
+  background: url('/img/homepage.jpg') center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .homepage-content {
+    background-color: rgba(0,0,0,.7)
+  }
+
+  .navbar.bg-dark {
+    background-color: transparent !important;
+  }
+
+  .jumbotron {
+    font-family: 'libre_baskerville';
+    background-color: transparent;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10%;
+
+    & > h1 {
+      font-size: 4rem;
+    }
+  }
+
+  .app-spec {
+    font-size: 14px;
+    @extend .clearfix;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+
+    & > li {
+      float: left;
+      padding: .5rem;
+    }
+  }
+}

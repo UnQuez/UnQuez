@@ -1,0 +1,18 @@
+.page {
+  @extend .clearfix;
+  margin-top: -56px;
+
+  .page-header-overlay {
+    background-color: rgba(0,0,0,.7);
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+    color: #FFF;
+  }
+
+  .page-header {
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

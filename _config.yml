@@ -19,22 +19,22 @@ encoding:       UTF-8
 exclude:
   - .git/
   - .github/
-  - assets/scss/
-  - build/
-  - js/
   - node_modules/
   - nuget/
   - scss/
   - vendor/
-  - CODE_OF_CONDUCT.md
-  - composer.json
+  - src/
   - Gemfile
   - Gemfile.lock
   - package.json
   - package-lock.json
+  - yarn.json
   - README.md
 
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-toc
+
+title: UnQuez
+description: "We create and design an awesome application"

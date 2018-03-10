@@ -2,13 +2,14 @@
 
 const gulp = require('gulp')
     , sass = require('gulp-sass')
-    , sourcemaps = require('gulp-sourcemaps')
     , rename = require('gulp-rename')
     , autoprefixer = require('gulp-autoprefixer')
     , batch = require('gulp-batch')
     , watch = require('gulp-watch')
     , header = require('gulp-header')
     , concat = require('gulp-concat')
+    , imagemin = require('gulp-imagemin')
+    , imageresize = require('gulp-image-resize')
     , pump = require('pump')
     , pkg = require('./package.json')
 
@@ -21,14 +22,37 @@ let config = {
     ' */',
     ''].join('\n'),
   vendor: {
-    css: [],
+    css: [
+      './src/libs/highlight.js/styles/**/*.css'
+    ],
     js: [
       './node_modules/jquery/dist/jquery.min.js',
       './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+      './src/libs/highlight.js/highlight.pack.js'
     ],
     font: [
       './node_modules/font-awesome/fonts/**/*'
     ]
+  },
+  autoprefixer: {
+    browsers: [
+      "Last 4 versions"
+    ]
+  },
+  imagemin: [
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.jpegtran({progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({
+      plugins: [
+        {removeViewBox: true},
+        {cleanupIDs: false}
+      ]
+    })
+  ],
+  imageresize: {
+    width: 1366,
+    percentage: 80
   }
 }
 
@@ -36,6 +60,7 @@ gulp.task('sass', (cb) => {
   pump([
     gulp.src('./src/stylesheets/unquez-site.scss'),
     sass({ outputStyle: 'compressed' }),
+    autoprefixer(config.autoprefixer),
     header(config.banner, { pkg : pkg }),
     gulp.dest('./css')
   ], cb)
@@ -50,6 +75,15 @@ gulp.task('script', (cb) => {
   ], cb)
 })
 
+gulp.task('image', (cb) => {
+  pump([
+    gulp.src('./src/img/**/*'),
+    imageresize(config.imageresize),
+    imagemin(config.imagemin),
+    gulp.dest('./img')
+  ], cb)
+})
+
 gulp.task('vendor:script', (cb) => {
   pump([
     gulp.src(config.vendor.js),
@@ -61,8 +95,8 @@ gulp.task('vendor:script', (cb) => {
 gulp.task('vendor:css', (cb) => {
   pump([
     gulp.src(config.vendor.css),
-    concat('vendor.js'),
-    gulp.dest('./js')
+    concat('vendor.css'),
+    gulp.dest('./css')
   ], cb)
 })
 
@@ -74,7 +108,7 @@ gulp.task('vendor:font', (cb) => {
 })
 
 gulp.task('vendor', ['vendor:css', 'vendor:script', 'vendor:font'])
-gulp.task('default', ['vendor', 'sass', 'script'])
+gulp.task('default', ['vendor', 'sass', 'script', 'image'])
 
 gulp.task('watch:sass', () => {
   watch('./src/stylesheets/**/*.scss', batch((evt, done) => {
@@ -89,3 +123,7 @@ gulp.task('watch:script', () => {
 })
 
 gulp.task('watch', ['watch:script', 'watch:sass'])
+
+gulp.task('dev', ['default'], () => {
+  gulp.start('watch')
+})
