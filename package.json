@@ -1,0 +1,29 @@
+{
+  "name": "unquez-site",
+  "version": "0.0.1-alpha",
+  "description": "UnQuez website",
+  "main": "index.js",
+  "repository": "https://github.com/UnQuez/UnQuez.git",
+  "author": "Yusril Herlian Syah <yusrilhsyah@gmail.com>",
+  "license": "CC-BY-4",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0",
+    "pump": "^3.0.0"
+  }
+}
