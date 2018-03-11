@@ -6,7 +6,7 @@ kramdown:
   auto_ids:     true
 
 # Permalinks
-permalink:      pretty
+permalink:      /blog/
 
 # Server
 source:         "."
@@ -35,6 +35,9 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-toc
+  - jekyll-paginate
 
 title: UnQuez
 description: "We create and design an awesome application"
+paginate: 5
+paginate_path: /blog/page-:num
