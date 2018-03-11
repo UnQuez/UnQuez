@@ -19,6 +19,7 @@
 {% if site.github %}
 <link href="{{ site.url }}/css/unquez-site.css" rel="stylesheet">
 <link href="{{ site.url }}/css/vendor.css" rel="stylesheet">
+<link href="{{ site.url }}/fonts/devicon.min.css" rel="stylesheet">
 {% else %}
 <link href="/css/unquez-site.css" rel="stylesheet">
 <link href="/css/vendor.css" rel="stylesheet">
