@@ -15,4 +15,4 @@ After we finish college, our team very rarely meet, because of their busyness. T
 
 The [UnQuez](http://unquez.com) name is taken from two English words namely "unique" and "quest". Currently we still do not have a place to be the headquarters of [UnQuez](http://unquez.com). But we still communicate with Slack and Whatsapp. And for the current project we do remotely.
 
-If you have anything to ask feel free contact us at <a href="mailto:support@unquez.com">support@unquez.com</a>.
+If you have anything to ask feel free to contact us at <a href="mailto:support@unquez.com">support@unquez.com</a>.
