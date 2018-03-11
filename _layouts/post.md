@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="page-content">
-          <div class="content-area blog-area" id="main-content">
+          <div class="content-area blog-area post-detail" id="main-content">
             {{ content }}
             <div class="clearfix">
               {% if page.comments %}
