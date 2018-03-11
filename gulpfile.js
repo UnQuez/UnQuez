@@ -31,7 +31,8 @@ let config = {
       './src/libs/highlight.js/highlight.pack.js'
     ],
     font: [
-      './node_modules/font-awesome/fonts/**/*'
+      './node_modules/font-awesome/fonts/**/*',
+      './src/libs/devicon/**/*'
     ]
   },
   autoprefixer: {

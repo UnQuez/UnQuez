@@ -1,0 +1,25 @@
+.contact-form {
+  max-width: 640px;
+  margin: 0px auto;
+}
+
+.social-media {
+  list-style-type: none;
+  padding: 0;
+  width: 480px;
+  margin: 0px auto;
+
+  li {
+    float: left;
+    width: 33.3333333333%;
+  }
+
+  a {
+    color: #444444;
+  }
+
+  span {
+    display: inline-block;
+    width: 20px;
+  }
+}

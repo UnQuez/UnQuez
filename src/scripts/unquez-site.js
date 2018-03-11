@@ -1,8 +1,15 @@
 $(function() {
-  var mainTop = $('#main-content').offset().top;
+  var $main = $('#main-content');
   var navbar = $('.navbar');
+  var mainTop;
+
+  if ($main.length) {
+    mainTop = $main.offset().top;
+  }
 
   $(window).on('scroll', function() {
+    if (!mainTop) return;
+
     if ($(window).scrollTop() > mainTop) {
       if (!navbar.hasClass('fixed-top')) {
         navbar.removeClass('navbar-transparent navbar-dark bg-dark')

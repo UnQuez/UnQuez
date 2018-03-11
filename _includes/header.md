@@ -22,4 +22,5 @@
 {% else %}
 <link href="/css/unquez-site.css" rel="stylesheet">
 <link href="/css/vendor.css" rel="stylesheet">
+<link href="/fonts/devicon.min.css" rel="stylesheet">
 {% endif %}

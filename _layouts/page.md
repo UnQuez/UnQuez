@@ -8,7 +8,7 @@
         <div class="page-header" style="background-image: url({{ page.image }})">
           <div class="page-header-overlay">
           <h1>{{ page.title }}</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quos!
+          <div class="page-lead">{{ page.description }}</div>
           </div>
         </div>
         <div class="page-content">
