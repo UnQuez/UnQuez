@@ -27,6 +27,7 @@
 <link href="/css/vendor.css" rel="stylesheet">
 <link href="/fonts/devicon.min.css" rel="stylesheet">
 {% endif %}
+<meta name="google-site-verification" content="ACvLkwJueV2_97Z76CYSSgiPMXMQ11eBqxsLhHGdS6Y" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115538224-1"></script>
