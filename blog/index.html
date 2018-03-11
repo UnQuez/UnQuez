@@ -1,0 +1,59 @@
+---
+  layout: posts
+  title: Blog Posts
+  description: UnQuez blog is a place for finding information about new technology of programming.
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<div class="blog-post">
+  <h1 class="blog-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class="blog-author">
+    <span class="date">
+      <span class="fa fa-calendar"></span> {{ post.date | date_to_long_string }}
+    </span>
+    {% if post.author %}
+    <span class="author">
+      <span class="fa fa-user"></span> {{ post.author }}
+    </span>
+    {% endif %}
+    {% if post.tech %}
+    <span class="technology">
+      <span class="fa fa-cogs"></span> {{ page.tech }}
+    </span>
+    {% endif %}
+  </p>
+  <div class="blog-content">
+    {{ post.content | strip_html | truncatewords: 70 }}
+  </div>
+</div>
+{% endfor %}
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    {% if paginator.previous_page %}
+      <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
+    {% else %}
+      <li class="page-item disabled"><a class="page-link" href="#"><span>&laquo; Prev</span></a></li>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+      <li class="page-item disabled"><a class="page-link" href="#"><em>{{ page }}</em></a></li>
+      {% elsif page == 1 %}
+      <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+      {% else %}
+      <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+    {% else %}
+    <li class="page-item disabled"><a class="page-link" href="#"><span>Next &raquo;</span></a></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
