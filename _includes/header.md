@@ -1,3 +1,4 @@
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="{{ page.description | default: site.description | smartify }}">
@@ -38,3 +39,4 @@
 
   gtag('config', 'UA-115538224-1');
 </script>
+</head>
