@@ -18,12 +18,12 @@
               <span class="date">
                 <span class="fa fa-calendar"></span> {{ page.date | date_to_long_string }}
               </span>
-              {% if post.author %}
+              {% if page.author %}
               <span class="author">
                 <span class="fa fa-user"></span> {{ page.author }}
               </span>
               {% endif %}
-              {% if post.tech %}
+              {% if page.tech %}
               <span class="technology">
                 <span class="fa fa-cogs"></span> {{ page.tech }}
               </span>

@@ -6,7 +6,7 @@ kramdown:
   auto_ids:     true
 
 # Permalinks
-permalink:      /blog/
+permalink:      /blog/:title
 
 # Server
 source:         "."
@@ -39,5 +39,5 @@ plugins:
 
 title: UnQuez
 description: "We create and design an awesome application"
-paginate: 5
+paginate: 20
 paginate_path: /blog/page-:num

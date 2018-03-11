@@ -3,7 +3,9 @@
 <meta name="description" content="{{ page.description | default: site.description | smartify }}">
 <meta name="author" content="{{ site.authors }}">
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords }}">
+{% endif %}
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
