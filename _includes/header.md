@@ -27,3 +27,13 @@
 <link href="/css/vendor.css" rel="stylesheet">
 <link href="/fonts/devicon.min.css" rel="stylesheet">
 {% endif %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115538224-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115538224-1');
+</script>
