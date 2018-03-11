@@ -5,6 +5,7 @@
   keywords: "unquez, software developer, software developer indonesia, web developer indonesia, jasa pembuatan web, web developer, create application"
   author: "Yusril Herlian Syah"
   color: "#2196F3"
+  comments: true
 ---
 
 Hello world, this is the first post from [UnQuez](http://unquez.com). This is just a sign that we want to try to start a business with our small team. We do business in the field of software development.
