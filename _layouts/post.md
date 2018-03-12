@@ -34,6 +34,7 @@
         <div class="page-content">
           <div class="content-area blog-area post-detail" id="main-content">
             {{ content }}
+            <div class="sharethis-inline-share-buttons">Share: </div>
             <div class="clearfix">
               {% if page.comments %}
               <div id="disqus_thread"></div>
