@@ -3,8 +3,8 @@
 
   <body>
     <div class="main">
-      {% include navbar.md %}
       <div class="page">
+        {% include navbar.md %}
         <div class="page-header" style="background-image: url({{ page.image }})">
           <div class="page-header-overlay">
           <h1>{{ page.title }}</h1>
