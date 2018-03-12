@@ -39,4 +39,6 @@
 
   gtag('config', 'UA-115538224-1');
 </script>
+<!-- Share this -->
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5aa6831a2436c400135c0ef8&product=inline-share-buttons"></script>
 </head>
