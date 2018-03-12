@@ -6,6 +6,11 @@
     padding-top: 12rem;
     padding-bottom: 8rem;
     color: #FFF;
+
+    & > h1:first-child {
+      max-width: 760px;
+      margin: 0px auto;
+    }
   }
 
   .page-header {
