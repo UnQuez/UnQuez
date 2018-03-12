@@ -10,7 +10,12 @@
   background-repeat: no-repeat;
 
   .homepage-content {
-    background-color: rgba(0,0,0,.7)
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
 
   .navbar.bg-dark {
