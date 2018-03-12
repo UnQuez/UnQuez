@@ -6,32 +6,27 @@ body {
 
 a {
   position: relative;
+  border-bottom: 0px solid transparent;
+  transition: all linear .2s;
 
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    border: 0px #444 solid;
-    width: 0px;
-    transition: width .2s;
-    bottom: -2px;
-  }
-
-  &:after {
-    left: 0px;
-  }
-
-  &:before {
-    right: 0px;
-  }
-
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
-    &:after,
-    &:before {
-      border-width: 1px;
-      width: 50%;
-    }
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(31, 133, 218);
+  }
+}
+
+.sharethis-inline-share-buttons {
+  margin: 30px 0px;
+
+  &:before {
+    content: "Share with your friend";
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: 'libre_baskerville';
+    text-align: center;
   }
 }
 
@@ -42,6 +37,19 @@ a {
 
 .navbar {
   font-family: 'Roboto Condensed', sans-serif;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  min-height: 56px;
+
+  &.navbar-light {
+
+  }
+
+  &.fixed-top {
+    position: fixed !important;
+  }
 }
 
 .navbar-brand {
@@ -123,6 +131,20 @@ pre {
 .navbar-light {
   background-color: #ffffff !important;
   box-shadow: 0px 0px 2px rgba(0,0,0,.3);
+
+  .fa-navicon {
+    color: #111;
+  }
+}
+
+.navbar-toggler {
+  border-width: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-transparent {
+    background-color: rgba(0,0,0,.6) !important;
+  }
 }
 
 .hljs {
